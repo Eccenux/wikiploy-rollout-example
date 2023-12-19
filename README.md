@@ -11,16 +11,31 @@ A rollout/deployment example that includes:
 
 As a startup for your project, you can simply clone/fork this repository (treat it as a template). Otherwise, you should follow the [README: building your project, Wikiploy](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md) recommendations.
 
-Quick steps:
-1. Clone this repository.
+### Quick steps
+1. Download a copy of this repository. You can download zip or clone and detach origin.
 1. Run `npm i` to install libraries.
 1. Open the repo folder in [VSCode](https://code.visualstudio.com/).
 1. Install recommended extensions.
 1. Run test and build commands from the command bar (green buttons, should be on the bottom bar of VSCode).
 
-Note that before running `wikiploy.mjs`, you will have to set up your bot password and bot.config (see below).
+Note that before running `wikiploy.mjs`, you will have to set up your bot password and bot.config (see *Preparing deployment* below).
 
-## Steps to deploy
+### Create gadget from this repo
+
+To create your own gadget from this repo:
+1. Do *Quick steps* first.
+2. Remove: `README.md`, `dist/*`, `Imdb.js` and `Imdb.test.js`.
+3. Create a new git repo and commit initial files.
+4. Fix names:
+	- Replace `yourGadgetName` with your actual gadget name.
+	- Replace `wikiploy-rollout-example` with lowercase version of your gadget name.
+	- Make sure `addConfig` works on the `site` you will be deplying to.
+5. Commit changes.
+6. [Use wiki2git to download scripts](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md#appendix-wiki2git).
+
+You could also start with wiki2git and then add files from `wikiploy-rollout-example`. It doesn't reallly matter. When you push changes to Github the changes will be sorted by date anyway.
+
+## Preparing deployment
 
 Note! It is now recommended to use the `WikiployLite` class (not `Wikiploy`). The older `Wikiploy` class uses Puppeteer and still works, but can be quite slow. **`WikiployLite` is much faster**. In future versions, Puppeteer integration might be removed. Please let me know if you would like to keep Puppeteer integration.
 
