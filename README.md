@@ -20,20 +20,21 @@ As a startup for your project, you can simply clone/fork this repository (treat 
 
 Note that before running `wikiploy.mjs`, you will have to set up your bot password and bot.config (see *Preparing deployment* below).
 
-### Create gadget from this repo
+### Create a gadget from this repository
 
-To create your own gadget from this repo:
-1. Do *Quick steps* first.
-2. Remove: `README.md`, `dist/*`, `Imdb.js` and `Imdb.test.js`.
-3. Create a new git repo and commit initial files.
+To create your own gadget from this repository:
+
+1. Follow the *Quick steps* first.
+2. Remove the following files: `README.md`, `dist/*`, `Imdb.js`, and `Imdb.test.js`.
+3. Create a new Git repository and commit the initial files.
 4. Fix names:
-	- Replace `yourGadgetName` with your actual gadget name.
-	- Replace `wikiploy-rollout-example` with lowercase version of your gadget name.
-	- Make sure `addConfig` works on the `site` you will be deplying to.
-5. Commit changes.
+   - Replace `yourGadgetName` with your actual gadget name.
+   - Replace `wikiploy-rollout-example` with the lowercase version of your gadget name.
+   - Ensure `addConfig` works on the `site` you will be deploying to.
+5. Commit the changes.
 6. [Use wiki2git to download scripts](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md#appendix-wiki2git).
 
-You could also start with wiki2git and then add files from `wikiploy-rollout-example`. It doesn't reallly matter. When you push changes to Github the changes will be sorted by date anyway.
+You could also start with wiki2git and then add files from `wikiploy-rollout-example`. It doesn't really matter. When you push changes to GitHub, the changes will be sorted by date anyway.
 
 ## Preparing deployment
 
