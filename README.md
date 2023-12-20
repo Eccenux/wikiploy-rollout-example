@@ -34,7 +34,7 @@ To create your own gadget from this repository:
 5. Commit the changes.
 6. [Use wiki2git to download scripts](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md#appendix-wiki2git).
 
-You could also start with wiki2git and then add files from `wikiploy-rollout-example`. It doesn't really matter. When you push changes to GitHub, the changes will be sorted by date anyway.
+You could also start with wiki2git and then add files from `wikiploy-rollout-example`. The order of commits doesn't really matter. When you push changes to GitHub, the changes will be sorted by date anyway.
 
 ## Preparing deployment
 
