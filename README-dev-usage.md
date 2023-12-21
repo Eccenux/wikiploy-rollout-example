@@ -1,4 +1,4 @@
-# Gadget example with Wikiploy
+# Building and deploying Gadgets
 
 In this release:
 

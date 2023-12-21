@@ -9,37 +9,13 @@ A rollout/deployment example that includes:
 
 ## Testing Wikiploy
 
-As a startup for your project, you can simply clone/fork this repository (treat it as a template). Otherwise, you should follow the [README: building your project, Wikiploy](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md) recommendations.
+As a startup for your project, you can simply download a copy of this repository (treat it as a template). For quick steps see: [README: dev-usage](https://github.com/Eccenux/wikiploy-rollout-example/blob/main/README-dev-usage.md)
 
-### Quick steps
-1. Download a copy of this repository. You can download zip or clone and detach origin.
-1. Run `npm i` to install libraries.
-1. Open the repo folder in [VSCode](https://code.visualstudio.com/).
-1. Install recommended extensions.
-1. Run test and build commands from the command bar (green buttons, should be on the bottom bar of VSCode).
-
-Note that before running `wikiploy.mjs`, you will have to set up your bot password and bot.config (see *Preparing deployment* below).
-
-### Create a gadget from this repository
-
-To create your own gadget from this repository:
-
-1. Follow the *Quick steps* first.
-2. Remove the following files: `README.md`, `dist/*`, `Imdb.js`, and `Imdb.test.js`.
-3. Create a new Git repository and commit the initial files.
-4. Fix names:
-   - Replace `yourGadgetName` with your actual gadget name.
-   - Replace `wikiploy-rollout-example` with the lowercase version of your gadget name.
-   - Ensure `addConfig` works on the `site` you will be deploying to.
-5. Commit the changes.
-6. [Use wiki2git to download scripts](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md#appendix-wiki2git).
-
-You could also start with wiki2git and then add files from `wikiploy-rollout-example`. The order of commits doesn't really matter. When you push changes to GitHub, the changes will be sorted by date anyway.
+Otherwise, you should follow recommendations in the [README: building your project, Wikiploy](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md).
 
 ## Preparing deployment
 
 Note! It is now recommended to use the `WikiployLite` class (not `Wikiploy`). The older `Wikiploy` class uses Puppeteer and still works, but can be quite slow. **`WikiployLite` is much faster**. In future versions, Puppeteer integration might be removed. Please let me know if you would like to keep Puppeteer integration.
-
 
 ### Wikiploy full (deprecated)
 
@@ -54,15 +30,22 @@ Note! It is now recommended to use the `WikiployLite` class (not `Wikiploy`). Th
 
 **Step. 1. Create deployment script**. You can start with a basic script below or with `wikiploy.mjs` and `wikiploy-dev.mjs` provided in this repository.
 
-**Step. 2. Prepare bot password**. 
+**Step. 2. Prepare bot password and config**. 
 * Setup you password on Special:BotPasswords. For Wikimedia wikis you can use: https://test.wikipedia.org/wiki/Special:BotPasswords
 * Rights you should setup (if you can): https://github.com/Eccenux/Wikiploy/blob/main/assets/Bot%20passwords%20-%20Test%20Wikipedia.png
+* Create your `bot.config.mjs` and fill username and password:
+```
+/**
+	Bot with edit&create rights.
+	
+	You can create the bot account on any wiki. E.g. on the test wiki:
+	https://test.wikipedia.org/wiki/Special:BotPasswords
+*/
+export const username = '...@...';	// e.g. Nux@Wikiploy
+export const password = '...';	// bot pass
+```
 
-**Step. 3. Preapre bot.config.js**. 
-* Create `bot.config.js` (note that your file MUST NOT be public).
-* Example config file in: https://github.com/Eccenux/Wikiploy/blob/main/assets/bot.config.public.js
-
-**Step. 4. Make sure bot.config.js is _not_ public**.
+**Step. 4. Make sure bot.config.mjs is _not_ public**. Never ever push you passwords to repository, even if the repository is "private". Change your password ASAP if you expose your password by accident.
 
 ## Basic Wikiploy script
 
