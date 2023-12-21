@@ -6,9 +6,10 @@
 
 This could be your `wikiploy.mjs`
 ```js
-import { DeployConfig, Wikiploy } from 'wikiploy';
+import { DeployConfig, WikiployLite } from 'wikiploy';
 
-const ployBot = new Wikiploy();
+import * as botpass from './bot.config.mjs';
+const ployBot = new WikiployLite(botpass);
 
 // run asynchronusly to be able to wait for results
 (async () => {
@@ -32,15 +33,20 @@ Let's walk through above code.
 
 This code is just to import classes defined in the Wikiploy.
 ```js
-import { DeployConfig, Wikiploy } from 'wikiploy';
+import { DeployConfig, WikiployLite } from 'wikiploy';
 ```
 
-This just creates and instance of the `Wikiploy` class. Note that I'm using `const` from new-ish JavaScript (ES6).
+This imports config to a `botpass` object.
 ```js
-const ployBot = new Wikiploy();
+import * as botpass from './bot.config.mjs';
 ```
 
-This is just a bit fancy way to run asynchronously and catch errors. The `process.exit` here might be needed to finish the puppeteer process.
+This just creates and instance of the `WikiployLite` class. Note that I'm using `const` from new-ish JavaScript (ES6/ES2015).
+```js
+const ployBot = new WikiployLite(botpass);
+```
+
+The next `async` part is just a bit fancy way to run asynchronously and catch errors. The `process.exit` here might be needed to finish wikiploy process (originally important for Puppeteer subprocess).
 ```js
 (async () => {
   ...
@@ -57,7 +63,7 @@ This adds a single configuration (deployment specification):
 		dst: 'User:Nux/test-jsbot--test.js',
 	}));
 ```
-You can have any number of configurations. Seriously, you could deploy a file to 100 destinations. It should just work. Wikiploy has quite robust caching, which should partially work even if you upload to multiple Wikimedia projects. And if you will use `WikiployLite` then it will be even faster.
+You can have any number of configurations. Seriously, you could deploy your files to 100 destinations. It should just work.
 
 And finally this runs deployments:
 ```js
