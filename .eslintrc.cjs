@@ -8,6 +8,9 @@ module.exports = {
 		"$": true,
 		"mw": true,
 	},
+	"exclude": [
+		"dist/",
+	],
 	"extends": "eslint:recommended",
 	"overrides": [{
 		"env": {
