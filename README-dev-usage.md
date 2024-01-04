@@ -29,7 +29,7 @@ To create your own gadget from this repository:
 4. Fix names:
    - Replace `yourGadgetName` with your actual gadget name.
    - Replace `wikiploy-rollout-example` with the lowercase version of your gadget name.
-   - Check `wikiploy-common.mjs` to ensure `addConfig` is using `site` you will be deploying to.
+   - Check `wikiploy*.mjs` to ensure usages of `addConfig` will deploy to a proper site (proper wiki).
 5. Commit the changes.
 
 ## Preparing deployment
