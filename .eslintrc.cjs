@@ -8,8 +8,8 @@ module.exports = {
 		"$": true,
 		"mw": true,
 	},
-	"exclude": [
-		"dist/",
+	"ignorePatterns": [
+		"dist/*",
 	],
 	"extends": "eslint:recommended",
 	"overrides": [{
