@@ -1,8 +1,8 @@
 # Building and deploying Gadgets
 
-In this release:
+This project in short:
 
-1. Uses Wikiploy v1.8, which introduced a helper for [user prompts](https://github.com/Eccenux/Wikiploy#userprompt-v18). This makes it easier to ask for a summary when you wikiploy changes.
+1. Uses Wikiploy for deploying your gadget.
 2. Uses Browserify to build JS.
 3. Uses LessCSS to build CSS.
 4. Uses Mocha/Chai for unit testing.
