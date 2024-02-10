@@ -15,25 +15,14 @@ Otherwise, you should follow recommendations in the [README: building your proje
 
 ## Preparing deployment
 
-Note! It is now recommended to use the `WikiployLite` class (not `Wikiploy`). The older `Wikiploy` class uses Puppeteer and still works, but can be quite slow. **`WikiployLite` is much faster**. In future versions, Puppeteer integration might be removed. Please let me know if you would like to keep Puppeteer integration.
-
-### Wikiploy full (deprecated)
-
-**Step. 1. Create deployment script**. You can start with a basic script below.
-
-**Step. 2. Run Chrome with debug**. Run Chrome Canary with debug mode enabled. I recommend using the Canary edition to ensure that you do not use your main Chrome browser for automation.
-
-  - Example command on Windows:
-  - "C:\Users\YOUR_USER_NAME\AppData\Local\Google\Chrome SxS\Application\chrome.exe" --remote-debugging-port=9222
-
-### Wikiploy lite (recommnded)
-
 **Step. 1. Create deployment script**. You can start with a basic script below or with `wikiploy.mjs` and `wikiploy-dev.mjs` provided in this repository.
 
-**Step. 2. Prepare bot password and config**. 
-* Setup you password on Special:BotPasswords. For Wikimedia wikis you can use: https://test.wikipedia.org/wiki/Special:BotPasswords
-* Rights you should setup (if you can): https://github.com/Eccenux/Wikiploy/blob/main/assets/Bot%20passwords%20-%20Test%20Wikipedia.png
-* Create your `bot.config.mjs` and fill username and password:
+**Step. 2. Prepare bot password and config**.
+A bot password is simply a sub-account. This sub-account has a specific name and a separate password. You can also choose specific actions this sub-account is allowed to perform (it can have fewer permissions than your normal account).
+
+* Set up your sub-account on Special:BotPasswords. For Wikimedia wikis, you can use: [test.wikipedia.org/wiki/Special:BotPasswords](https://test.wikipedia.org/wiki/Special:BotPasswords)
+* Grant permissions to your sub-account. Here is something you might want to set up for your Wikiploy sub-account: [Wikiploy/assets/Bot passwords - Test Wikipedia.png](https://github.com/Eccenux/Wikiploy/blob/main/assets/Bot%20passwords%20-%20Test%20Wikipedia.png).
+* Create your `bot.config.mjs` and fill username and password of your sub-account:
 ```
 /**
 	Bot with edit&create rights.
@@ -45,7 +34,7 @@ export const username = '...@...';	// e.g. Nux@Wikiploy
 export const password = '...';	// bot pass
 ```
 
-**Step. 4. Make sure bot.config.mjs is _not_ public**. Never ever push you passwords to repository, even if the repository is "private". Change your password ASAP if you expose your password by accident.
+**Step. 3. Make sure bot.config.mjs is _not_ public**. Never ever push you passwords to repository, even if the repository is "private". Change your password ASAP if you expose your password by accident.
 
 ## Wikploy concepts
 [README: wikiploy-concepts](https://github.com/Eccenux/wikiploy-rollout-example/blob/main/README-wikiploy-concepts.md)
