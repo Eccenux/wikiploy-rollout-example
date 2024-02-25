@@ -16,9 +16,7 @@
 		"chai": "4.x",
 		"eslint": "8.x",
 		"less": "4.x",
-		"mocha": "10.x"
-	},
-	"dependencies": {
+		"mocha": "10.x",
 		"wikiploy": "2.x"
 	}
 }
