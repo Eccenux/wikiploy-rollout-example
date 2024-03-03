@@ -49,7 +49,7 @@ mw.hook('userjs.yourGadgetNameExample.loaded').fire(gadget);
 
 $(function(){
 	// load Mediwiki core dependency
-	// (in this case util is for `mw.util.addPortletLink`)
+	// (in this case util is loaded to be able to use `mw.util.addPortletLink`)
 	mw.loader.using(["mediawiki.util"]).then( function() {
 		gadget.init();
 

@@ -2,7 +2,8 @@ module.exports = {
 	"env": {
 		"node": true,
 		"browser": true,
-		"es2021": true,
+		"es2017": true,	// note that even using async/await might not be supported in MW: https://phabricator.wikimedia.org/T277675
+		"mocha": true,
 	},
 	"globals": {
 		"$": true,
@@ -12,22 +13,33 @@ module.exports = {
 		"dist/*",
 	],
 	"extends": "eslint:recommended",
-	"overrides": [{
-		"env": {
-			"node": true,
-			"browser": true,
+	"overrides": [
+		{
+			"env": {
+				"node": true,
+				"browser": true,
+			},
+			"files": [
+				".eslintrc.{js,cjs}"
+			],
+			"parserOptions": {
+				"sourceType": "script"
+			}
 		},
-		"files": [
-			".eslintrc.{js,cjs}"
-		],
-		"parserOptions": {
-			"sourceType": "script"
-		}
-	}],
-	"parserOptions": {
-		"ecmaVersion": "latest",
-		"sourceType": "module"
-	},
+		{
+			"env": {
+				"node": true,
+				"browser": false,
+				"es2021": true,
+			},
+			"files": [
+				"*.mjs",
+			],
+			"parserOptions": {
+				"sourceType": "module"
+			}
+		},
+	],
 	"rules": {
 		"no-prototype-builtins": "off",
 		"indent": [
