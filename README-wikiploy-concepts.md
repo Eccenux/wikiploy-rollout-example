@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [Basic Wikiploy script](#basic-wikiploy-script)
+	- [Code to deploy test.js](#code-to-deploy-testjs)
+	- [Wikiploy code explained](#wikiploy-code-explained)
+- [Destination URL](#destination-url)
+	- [Explicit](#explicit)
+	- [Logged in user](#logged-in-user)
+	- [Non-default site](#non-default-site)
+- [See also](#see-also)
+
+<!-- /TOC -->
+
 # Wikiploy concepts
 
 ## Basic Wikiploy script

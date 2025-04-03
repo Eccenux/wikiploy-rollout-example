@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [Quick testing](#quick-testing)
+- [Create a gadget from this repository](#create-a-gadget-from-this-repository)
+- [Preparing deployment](#preparing-deployment)
+
+<!-- /TOC -->
+
 # Building and deploying Gadgets
 
 This project in short:

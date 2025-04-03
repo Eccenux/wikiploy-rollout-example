@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [Testing Wikiploy](#testing-wikiploy)
+- [Preparing deployment](#preparing-deployment)
+- [Wikploy concepts](#wikploy-concepts)
+- [See also](#see-also)
+
+<!-- /TOC -->
+
 # Gadget example with Wikiploy
 
 A rollout/deployment example that includes:
@@ -40,13 +49,13 @@ export const password = '...';	// bot pass
 [README: wikiploy-concepts](https://github.com/Eccenux/wikiploy-rollout-example/blob/main/README-wikiploy-concepts.md)
 
 Contents:
-- Basic Wikiploy script:
-	- Example code to deploy a JS script.
-	- Wikiploy code explained.
-- Destination URL (`dst` and `site` property):
-	- Explicit `dst` page.
-	- Logged in user shorthand.
-	- Non-default site as destination.
+- [Basic Wikiploy script](README-wikiploy-concepts.md#basic-wikiploy-script)
+	- [Code to deploy test.js](README-wikiploy-concepts.md#code-to-deploy-testjs)
+	- [Wikiploy code explained](README-wikiploy-concepts.md#wikiploy-code-explained)
+- [Destination URL](README-wikiploy-concepts.md#destination-url)
+	- [Explicit](README-wikiploy-concepts.md#explicit)
+	- [Logged in user](README-wikiploy-concepts.md#logged-in-user)
+	- [Non-default site](README-wikiploy-concepts.md#non-default-site)
 
 ## See also
 - [README: building your project](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md) recommendation on how to build JS and CSS for your gadgets (includes unit testing setup).
