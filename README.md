@@ -13,7 +13,7 @@
 
 This repository is meant to be used as a template of a gadget for Wikimedia projects.
 
-Use this template freely. Consider it to be *free* as in *free-drink* :) aka (CC-0)[https://creativecommons.org/publicdomain/zero/1.0/deed.pl].
+Use this template freely. Consider it to be *free* as in *free-drink* :) aka [CC-0](https://creativecommons.org/publicdomain/zero/1.0/deed.pl).
 
 ## Quick start
 
