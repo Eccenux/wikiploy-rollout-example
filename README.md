@@ -1,6 +1,8 @@
 <!-- TOC -->
 
-- [Testing Wikiploy](#testing-wikiploy)
+- [Quick start](#quick-start)
+- [What's in the example](#whats-in-the-example)
+- [Wikiploy 1st-time usage](#wikiploy-1st-time-usage)
 - [Preparing deployment](#preparing-deployment)
 - [Wikploy concepts](#wikploy-concepts)
 - [See also](#see-also)
@@ -9,6 +11,33 @@
 
 # Gadget example with Wikiploy
 
+This repository is meant to be used as a template of a gadget for Wikimedia projects.
+
+Use this template freely. Consider it to be *free* as in *free-drink* :) aka (CC-0)[https://creativecommons.org/publicdomain/zero/1.0/deed.pl].
+
+## Quick start
+
+Note. If this your first time using Wikiploy, you might want to use more detailed instructions: [Wikiploy 1st-time usage](#wikiploy-1st-time-usage).
+
+### Prepare your repository with the tpl:
+1. Use one of releases, download zip and and unpack in some folder.
+2. Open the folder in [VSCode](https://code.visualstudio.com/).
+3. Initialize your repo and commit code (tpl code).
+4. Copy your `bot.config.mjs` to the root of your repo.
+
+Note! If you are using an existing gadget: [Use wiki2git to download existing JS script and CSS](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md#appendix-wiki2git).
+
+### Start working on your gadget:
+1. Fix names:
+   - Replace `yourGadgetName` with your actual gadget name (in whole repo).
+   - Replace `wikiploy-rollout-example` with the lowercase version of your gadget name.
+2. Check `wikiploy*.mjs` to ensure usages of `addConfig` and `addConfigRelease` will deploy to a proper site (proper wiki).
+3. Commit the changes.
+4. You might want to create your initial `README.md` and start working on files in `src` directory.
+5. Click on "build & deploy-dev" to test on wiki.
+
+## What's in the example
+
 A rollout/deployment example that includes:
 - Recommended setup for building scripts: Bundling multiple files into a single JS file (from `src` to `dist`).
 - Visual Studio Code setup: Tasks and command bar for a one-click build.
@@ -16,7 +45,7 @@ A rollout/deployment example that includes:
 - Example gadget: Gadget with hooks and a link in the toolbar (*Tool* menu of articles).
 - Full setup of unit testing: Simple parser class with a test. VSC is set up for test debugging.
 
-## Testing Wikiploy
+## Wikiploy 1st-time usage
 
 As a startup for your project, you can simply download a copy of this repository (treat it as a template). For quick steps see: [README: dev-usage](https://github.com/Eccenux/wikiploy-rollout-example/blob/main/README-dev-usage.md)
 
@@ -58,4 +87,4 @@ Contents:
 	- [Non-default site](README-wikiploy-concepts.md#non-default-site)
 
 ## See also
-- [README: building your project](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md) recommendation on how to build JS and CSS for your gadgets (includes unit testing setup).
+- [README: building your project](https://github.com/Eccenux/Wikiploy/blob/main/README.building%20your%20project.md) recommendation on how to build JS and CSS for your gadgets (includes unit testing setup). Note, that README describes the same things that are already prepared for you in this template.
