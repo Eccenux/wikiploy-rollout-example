@@ -2,6 +2,7 @@
 	"name": "wikiploy-rollout-example",
 	"type": "commonjs",
 	"scripts": {
+		"--note--": "You can remove all of this and just keep the deploy script.",
 		"test": "mocha",
 		"build-less": "lessc src/less/main.less dist/yourGadgetName.css",
 		"build-js": "browserify src/main.js -o dist/yourGadgetName.js",
@@ -11,6 +12,8 @@
 		"rollout-dev": "npm run build && npm run deploy-dev",
 		"rollout": "npm run build && npm run deploy"
 	},
+	"--deps-note1--": "You can remove most of this and keep eslint and wikiploy;",
+	"--deps-note2--": "mocha and chai are for testing; browserify is for building JS; less is for building/merging CSS.",
 	"devDependencies": {
 		"browserify": "17.x",
 		"chai": "4.x",
